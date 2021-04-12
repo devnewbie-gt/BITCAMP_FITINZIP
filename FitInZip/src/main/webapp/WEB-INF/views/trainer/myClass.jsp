@@ -42,7 +42,7 @@
 				//alert("성공");
 				var html = "";
 				var button = "";
-				//console.log(data);
+				console.log(data);
 				
 				if(data.length == 0) {
 					alert("데이터가 없습니다.");
@@ -63,16 +63,16 @@
 					var days = week[Now.getDay()]; //오늘 요일
 					
 					var yoil = (data[i].yoil).split(','); //클래스 요일
-					//console.log("요일: " + yoil);
+					console.log("요일: " + yoil);
 					
 					for(var j = 0; j < (data[i].yoil).split(',').length; j++) {
 						var clsYoil = yoil[j]; //클래스 요일
-						/* var clsStartYear = new Date(data[i].startDate).getFullYear();//클래스 시작 년
+						 var clsStartYear = new Date(data[i].startDate).getFullYear();//클래스 시작 년
 						var clsEndYear = new Date(data[i].endDate).getFullYear(); //클래스 끝 년
 						var clsStartMonth = new Date(data[i].startDate).getMonth(); //클래스 시작 달
 						var clsEndMonth = new Date(data[i].endDate).getMonth(); //클래스 끝 달
 						var clsStartDate = new Date(data[i].startTime).getDate(); //클래스 시작일
-						var clsEndDate = new Date(data[i].endDate).getDate(); //클래스 종료일 */
+						var clsEndDate = new Date(data[i].endDate).getDate(); //클래스 종료일 
 						var clsStartHour = new Date(data[i].startTime).getHours(); //클래스 시작시간
 						var clsEndHour = new Date(data[i].endTime).getHours(); //클래스 끝 시간
 						var clsStartMin = new Date(data[i].startTime).getMinutes(); //클래스 시작 분
@@ -93,12 +93,12 @@
 						    return time; //2자리라면 값을 내보냄
 							}
 						}
-						/* clsStartYear = pluszero(clsStartYear);
+						clsStartYear = pluszero(clsStartYear);
 						clsEndYear = pluszero(clsEndYear);
 						clsStartMonth = pluszero(clsStartMonth); //만들었던 함수 적용
 						clsEndMonth = pluszero(clsEndMonth);
 						clsStartDate = pluszero(clsStartDate);
-						clsEndDate = pluszero(clsEndDate); */
+						clsEndDate = pluszero(clsEndDate); 
 						nowYear = pluszero(nowYear);
 						nowMonth = pluszero(nowMonth);
 						nowDay = pluszero(nowDay);
@@ -107,11 +107,22 @@
 						clsStartMin = pluszero(clsStartMin);
 						clsEndMin = pluszero(clsEndMin); 
 					
+						console.log("clsStartDate: " + clsStartDate);
+						console.log("nowDay: " + nowDay);
+						var truth = clsStartDate <= nowDay;
+						console.log(clsStartDate <= nowDay);
+						console.log("사실: " + truth);
 						
 						
-						if(clsYoil == days) {
+						if(clsStartDate > nowDay) {
+							button = '<button type="button" class="btn btn-primary" onclick="meet(\'' + data[i].meetUrl + '\')" id="cls_button" disabled>시작 </button>';
+						} else if (clsStartMonth > nowMonth) {
+							button = '<button type="button" class="btn btn-primary" onclick="meet(\'' + data[i].meetUrl + '\')" id="cls_button" disabled>시작 </button>';
+						}
+						else if(clsYoil == days) {
 							var compareTime = new Date(nowYear, nowMonth, nowDay, clsStartHour, clsStartMin); //시작시간
 							var endCompareTime = new Date(nowYear, nowMonth, nowDay, clsEndHour, clsEndMin); // 끝나는시간
+							console.log("compareTime: " + compareTime);
 							console.log("endCompareTime: " + endCompareTime);
 							//시작시간 15분 전
 							var finalTime = compareTime.setMinutes(compareTime.getMinutes() - 15);
@@ -144,16 +155,16 @@
  					html += clsStartHour + ':' + clsStartMin + '~' + clsEndHour + ':' + clsEndMin + '</dd>';
  					html += '<dd style="color: black; font-weight: 400; font-size: 12px; font-weight: bold;">수강자: '; 
  					
- 					console.log("datai: " + data[i].list.length);
+ 					//console.log("datai: " + data[i].list.length);
  					if(data[i].list.length == 0) {
 						 html += '신청한 수강자가 없습니다.'; 
 					}
  					
  					for(var j = 0; j < data[i].list.length; j++) {
- 						console.log("수강생: " + data[i].list[j].length + ' ');
- 						console.log("이름: " + data[i].list[j]);
- 						console.log("data[i]: " + i);
- 						console.log("list[j]: " + j);
+ 						//console.log("수강생: " + data[i].list[j].length + ' ');
+ 						//console.log("이름: " + data[i].list[j]);
+ 						//console.log("data[i]: " + i);
+ 						//console.log("list[j]: " + j);
 						html += data[i].list[j] + ' ';	
 					};
  					html += '</dd></dl></div></a></td><td>';

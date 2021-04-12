@@ -380,7 +380,7 @@ public class TrainerController {
     	trainerService.updateCal(dto);
     	
     	System.out.println("정산금 인출 신청 성공!");
-    	return "redirect:trainerMainPage";
+    	return "redirect:trainerMainPageView";
     }
     
 

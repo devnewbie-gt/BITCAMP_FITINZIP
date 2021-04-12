@@ -43,11 +43,19 @@
 	
 	<!-- 강사 메인페이지 메인 (정산금) -->
 	<select id="TrainerMain3" parameterType="trainerDTO" resultType="String">
-		SELECT TO_CHAR(NVL(SUM(p.NET_PRICE), 0), '999,999,999') as totalCal
+	<!-- 	SELECT TO_CHAR(NVL(t.total_cal, 0), '999,999,999') as totalCal
 		FROM FIT_CLASS f, PAYMENT P
 		WHERE f.CLS_CODE = p.CLS_CODE
 		AND f.TRAINER_ID = #{id}
+		AND TO_CHAR(f.END_DATE, 'YYYY-MM-DD') <![CDATA[ < ]]> SYSDATE -->
+		
+		SELECT TO_CHAR(NVL(t.total_cal, 0), '999,999,999') as totalCal
+		FROM FIT_CLASS f, PAYMENT p, TRAINER_REGISTER t
+		WHERE f.CLS_CODE = p.CLS_CODE
+        AND t.TRAINER_ID = f.TRAINER_ID
+		AND f.TRAINER_ID = #{id}
 		AND TO_CHAR(f.END_DATE, 'YYYY-MM-DD') <![CDATA[ < ]]> SYSDATE
+        GROUP BY t.TOTAL_CAL
 	</select>
 	
 	<!-- 강사 등록하기 -->
