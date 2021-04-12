@@ -93,8 +93,7 @@
 										class="adClick">
 										<div class="play_thum">
 											<div>
-												<img src="https://ficle-live.s3.ap-northeast-2.amazonaws.com/origin/program/2021-02-10/1612949934294525669.png"
-													alt="이미지" style="width: 100%;">
+												<img src="${ing.thumbnailFileName}" alt="이미지" style="width: 100%;">
 											</div>
 											<div class="play_label"></div>
 										</div>

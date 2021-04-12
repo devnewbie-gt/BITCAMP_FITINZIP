@@ -46,6 +46,14 @@ public class LiveClassController {
 		model.addAttribute("classList", classList);
 		
 		List<ClsListDTO> ingList = clsService.getIngList(clsCategory);
+		
+		for (ClsListDTO ingListDTO : ingList) {
+			String fileName = ingListDTO.getThumbnailFileName();
+			System.out.println("fileName : " + fileName);
+			fileName = fileName.substring(fileName.indexOf("resources"));
+			ingListDTO.setThumbnailFileName(fileName);
+		}
+		
 		model.addAttribute("ingList", ingList);
 		
 		return "class/liveClass";
