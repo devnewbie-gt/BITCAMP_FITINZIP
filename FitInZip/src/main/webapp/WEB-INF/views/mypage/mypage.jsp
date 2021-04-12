@@ -34,7 +34,6 @@
 					$('#clsParticipation').text(parseInt(clsParticipation)+"%");
 				}else if($.isNumeric()){
 					$('#clsParticipation').text(0+"%");
-				}
 				}else{
 					$('#clsParticipation').text(0+"%");
 				}
