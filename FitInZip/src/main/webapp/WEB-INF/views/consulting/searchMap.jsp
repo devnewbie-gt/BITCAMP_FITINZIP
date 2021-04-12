@@ -71,17 +71,12 @@
 	position: absolute;
 	z-index: -1;
 }
-<<<<<<< HEAD
 
 .theadWidth {
 	width: 100px;
 }
 
-=======
-.theadWidth {
-	width: 100px;
-}
->>>>>>> 1c0b6435157934064c967972c78c275ffb3c54e4
+
 .title1 {
 	text-align: center;
 	font-weight: 800;
@@ -132,7 +127,7 @@
 	
 	
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=42d81b928e716a630ed23f5e7f1d07e8&libraries=services"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=599fcff0a864a6bd95dca4d868013e81&libraries=services"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div
@@ -145,10 +140,20 @@
 		var map = new daum.maps.Map(mapContainer, mapOption);
 		//주소-좌표 변환 객체를 생성
 		var geocoder = new daum.maps.services.Geocoder();
+		
+		var imageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png', // 마커이미지의 주소입니다    
+	    imageSize = new kakao.maps.Size(35, 45), // 마커이미지의 크기입니다
+	    imageOption = {offset: new kakao.maps.Point(20, 45)};
+		
+		var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+	    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598);
+		
+		
 		//마커를 미리 생성
 		var marker = new daum.maps.Marker({
 			position: new daum.maps.LatLng(37.537187, 127.005476),
-			map: map
+			map: map,
+			image: markerImage
 		});
 		
 		var coords;

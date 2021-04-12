@@ -85,11 +85,11 @@
 					<p style="display: inline-block;">사람간의 간격을 유지합니다</p>
 				</div>
 				<div style="color:gray; margin-bottom: 20px;">
-					<i class="fas fa-spray-can fa-3x" style="margin-right: 20px;"></i>
+					<i class="fas fa-head-side-mask fa-3x" style="margin-right: 20px;"></i>
 					<p style="display: inline-block;">매장은 소독을 통해 청결을 유지합니다</p>
 				</div>
 				<div style="color:gray; margin-bottom: 20px;">
-					<i class="fas fa-credit-card fa-3x" style="margin-right: 20px;"></i>
+					<i class="fas fa-head-side-mask fa-3x" style="margin-right: 20px;"></i>
 					<p style="display: inline-block;">신용카드 결제만 받습니다.</p>
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 	<!-- Footer -->
     <jsp:include page="../footer.jsp"></jsp:include>
 	
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=42d81b928e716a630ed23f5e7f1d07e8"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=599fcff0a864a6bd95dca4d868013e81"></script>
 	<script>
 		var arr = new Array();
 		<c:forEach items="${maplist }" var="map">
@@ -134,9 +134,17 @@
 		var la = parseFloat(arr[i].latitude);
 		var ma = parseFloat(arr[i].hardness);
 		
+		var imageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png', // 마커이미지의 주소입니다    
+		imageSize = new kakao.maps.Size(35, 45), // 마커이미지의 크기입니다
+	    imageOption = {offset: new kakao.maps.Point(20, 45)};
+		
+		var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+	    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598);
+		
 		var marker = new kakao.maps.Marker({
 		    map: map, 
-		    position: new kakao.maps.LatLng(ma, la)
+		    position: new kakao.maps.LatLng(ma, la),
+		    image: markerImage 
 		})
 		
 		markers[i] = marker;
@@ -171,16 +179,15 @@
 		    position: markers[i].getPosition()
 		});
 		
-		overlays[i] = overlay;
 		
 		// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
 		kakao.maps.event.addListener(markers[i], 'click', function() {
-			overlays[i].setMap(map);
+			overlay.setMap(map);
 		});
 		
 		// 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
 		function closeOverlay() {
-			overlays[i].setMap(null);     
+			overlay.setMap(null);     
 		}
 		
 	}

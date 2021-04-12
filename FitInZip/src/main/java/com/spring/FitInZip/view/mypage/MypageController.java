@@ -535,6 +535,8 @@ public class MypageController {
 			mypageService.deleteUserIsReason(dto);
 		}
 		
+		session.setAttribute("member", null);
+		
 		ObjectMapper mapper = new ObjectMapper();
 		
 		return mapper.writeValueAsString(null);
