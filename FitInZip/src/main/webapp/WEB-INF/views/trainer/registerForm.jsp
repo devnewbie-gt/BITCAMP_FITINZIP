@@ -193,7 +193,7 @@
           
 	           	<div class="col-12">
 	            	<label for="password" class="form-label" style="margin-top: 10px">비밀번호</label>
-	              	<input type="text" class="form-control" name="password" id="password" placeholder="" required>
+	              	<input type="password" class="form-control" name="password" id="password" placeholder="" required>
 	            </div>
           
 	            <div class="col-12">
