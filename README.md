@@ -21,5 +21,5 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 - Front : HTML, CSS, JavaScript, Bootstrap, jQuery, Brackets, Ajax
 - Back : Java 기반, Spring Framework, MyBatis, Apache Tomcat 8.5v, Oracle DB
 - API : I'mport, Kakao developers, FullCalendar, Google Calendar, CKEditor, Chart.js
-- For Coworking : Github, Notion
+- VCS & For Coworking : Github, Notion
 ***
