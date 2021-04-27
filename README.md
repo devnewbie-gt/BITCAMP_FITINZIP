@@ -18,4 +18,8 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 - 마무리(21.04.09 ~ 21.04.12) : 테스트 및 오류 수정
 ### 사용 기술
 ![image](https://user-images.githubusercontent.com/78800147/116201839-e8e07080-a774-11eb-815d-e7111c1671ac.png)
+- Front : HTML, CSS, JavaScript, Bootstrap, jQuery, Brackets, Ajax
+- Back : Java 기반, Spring Framework, MyBatis, Apache Tomcat 8.5v, Oracle DB
+- API : I'mport, Kakao developers, FullCalendar, Google Calendar, CKEditor, Chart.js
+- For Coworking : Github, Notion
 ***
