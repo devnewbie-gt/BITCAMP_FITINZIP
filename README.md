@@ -10,11 +10,6 @@
 # 개요
 ### 소개
 Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판매를 제공하는 플랫폼 서비스입니다.
-### 일정 관리
-- 소요기간 : 약 4.7주
-- 기획, 분석 및 설계(21.03.11 ~ 21.03.18) : 아이디어 및 기능 회의, DB설계, 메인 화면 구성, Spring Framework 환경 설정
-- 코드 작성(21.03.20 ~ 21.04.08) : view, control 기능 구현 및 git을 이용한 병합
-- 마무리(21.04.09 ~ 21.04.12) : 테스트 및 오류 수정
 ### 사용 기술
 ![image](https://user-images.githubusercontent.com/78800147/116201839-e8e07080-a774-11eb-815d-e7111c1671ac.png)
 - Front : HTML, CSS, JavaScript, Bootstrap, jQuery, Brackets, Ajax
@@ -22,3 +17,9 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 - API : I'mport, Kakao developers, FullCalendar, Google Calendar, CKEditor, Chart.js
 - VCS & For Team Collaboration Tool : Github, Notion
 ***
+# 분석 및 설계
+### 일정 관리
+- 소요기간 : 약 4.7주
+- 기획, 분석 및 설계(21.03.11 ~ 21.03.18) : 아이디어 및 기능 회의, DB설계, 메인 화면 구성, Spring Framework 환경 설정
+- 코드 작성(21.03.20 ~ 21.04.08) : view, control 기능 구현 및 git을 이용한 병합
+- 마무리(21.04.09 ~ 21.04.12) : 테스트 및 오류 수정
