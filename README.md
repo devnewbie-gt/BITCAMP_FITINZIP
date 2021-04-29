@@ -42,6 +42,7 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 > - Fullcalendar를 이용한 캘린더 구현
 > ![image](https://user-images.githubusercontent.com/78800147/116505305-7945bf00-a8f5-11eb-9ddb-1a283c3acf5e.png)
 > - 쿠폰 발급을 위한 출석 기능
+> 
 > ![attendent](https://user-images.githubusercontent.com/78800147/116510140-6801b000-a8ff-11eb-865d-c23277890d68.png)
 > - 수강 내역에 따른 일정 표시와 API 사용
 > ![functions](https://user-images.githubusercontent.com/78800147/116510182-7780f900-a8ff-11eb-8724-0c951da06381.png)
