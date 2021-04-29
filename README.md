@@ -49,8 +49,7 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 
 
 #### 2. 강사의 강의 관리
+> - 강의 목록 확인
+> ![class_list](https://user-images.githubusercontent.com/78800147/116511292-3558b700-a901-11eb-96bd-330b00c3cce3.png)
 
-
-
-> - 강의 등록
 
