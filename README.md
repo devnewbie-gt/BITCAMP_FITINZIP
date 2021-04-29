@@ -44,9 +44,13 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 > 
 > > ![attendent](https://user-images.githubusercontent.com/78800147/116510140-6801b000-a8ff-11eb-865d-c23277890d68.png)
 > - 수강 내역에 따른 일정 표시와 API 사용
+> ![functions](https://user-images.githubusercontent.com/78800147/116516291-68eb0f80-a908-11eb-90ae-d68c5c046c08.png)
+
 
 
 #### 2. 강사의 강의 관리
 > - 강의 목록 확인
+> ![class_list](https://user-images.githubusercontent.com/78800147/116516307-6c7e9680-a908-11eb-98aa-fb79fb6552cb.png)
+
 
 
