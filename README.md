@@ -39,11 +39,11 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 ***
 ### 담당 파트 화면 및 기능 소개
 #### 1. 일반 회원 일정 관리
-
-
-#### 2. 강사의 강의 관리
 > - Fullcalendar를 이용한 캘린더 구현
 > ![image](https://user-images.githubusercontent.com/78800147/116505305-7945bf00-a8f5-11eb-9ddb-1a283c3acf5e.png)
+
+#### 2. 강사의 강의 관리
+
 
 
 > - 강의 등록
