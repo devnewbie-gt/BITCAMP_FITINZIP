@@ -52,5 +52,9 @@ Fitinzip은 비대면으로 피트니스 강의와 간단한 운동 물품 판�
 > - 강의 목록 확인
 > ![class_list](https://user-images.githubusercontent.com/78800147/116516307-6c7e9680-a908-11eb-98aa-fb79fb6552cb.png)
 
-
+> - 강의 등록 화면(각 항목 입력란에 대한 유효성 검사 적용)
+> ![image](https://user-images.githubusercontent.com/78800147/116517930-9afd7100-a90a-11eb-8929-757b101271a0.png)
+> ![class_register](https://user-images.githubusercontent.com/78800147/116518189-e9ab0b00-a90a-11eb-92d9-f66196329275.png)
+> ![class_register2](https://user-images.githubusercontent.com/78800147/116518690-8c638980-a90b-11eb-9cc6-3f23dfcc500b.png)
+> - 강의 수정은 등록과 대부분 유사함
 
